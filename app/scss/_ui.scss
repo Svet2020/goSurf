@@ -1,0 +1,181 @@
+// ------------------------------------------------CLEARFIX
+
+.clearfix:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+// ------------------------------------------------IBG
+
+.ibg {
+  background: center / cover no-repeat;
+  img {
+    display: none;
+  }
+}
+
+.container {
+  width: 100%;
+  max-width: 1920px;
+}
+
+// ------------------------------------------------TITLES
+
+// ч------------------------------------------------ЗАГОЛОВОК ДЛЯ СЕКЦИЙ
+
+.title {
+  position: relative;
+  font-size: 80px;
+  font-weight: 800;
+  line-height: 1em;
+  @media (max-width: $md1) {
+    font-size: 60px;
+  }
+}
+
+.second-title {
+  position: relative;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 1em;
+  span {
+    font-weight: 100;
+  }
+  @media (max-width: $md1) {
+    font-size: 30px;
+  }
+}
+
+.section-title {
+  span {
+    position: relative;
+    font-size: 200px;
+    font-weight: 800;
+    line-height: 1em;
+    color: rgba(#fff, 0.02);
+  }
+  h3 {
+    //@include title-1;
+    position: absolute;
+    top: 30px;
+    right: -10px;
+    color: #fff;
+    &:after {
+      content: "";
+      width: 80px;
+      height: 3px;
+      position: absolute;
+      top: -5px;
+      right: 0px;
+      background-color: $green;
+    }
+  }
+}
+
+
+@mixin desc {
+  display: inline-block;
+  position: relative;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 0.3em;
+  line-height: 1.4em;
+  opacity: 0.5;
+  @media (max-width: $md1) {
+    font-size: 18px;
+  }
+}
+
+@mixin descAfter {
+  content: "";
+  width: 80px;
+  height: 1px;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  background-color: #fff;
+  opacity: 0.5;
+}
+
+.desc-left {
+  padding: 0px 0px 0px 125px;
+  @include desc;
+  &:after {
+    @include descAfter;
+  }
+}
+.desc-right {
+  padding: 0px 125px 0px 0px;
+  @include desc;
+  &:after {
+    @include descAfter;
+    left: auto;
+    right: 0;
+  }
+}
+
+%menu-icon-text {
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 3px;
+  line-height: 1em;
+}
+
+// ------------------------------------------------HEADER MAP ANIMATION
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+%dotFadeIn {
+  opacity: 0;
+  animation: fadeIn 1s linear 1s forwards;
+}
+
+.dot-1 {
+  @extend %dotFadeIn;
+}
+.dot-2 {
+  @extend %dotFadeIn;
+  animation-delay: 2s;
+}
+.dot-3 {
+  @extend %dotFadeIn;
+  animation-delay: 3s;
+}
+.dot-4 {
+  @extend %dotFadeIn;
+  animation-delay: 4s;
+}
+.dot-5 {
+  @extend %dotFadeIn;
+  animation-delay: 7s;
+}
+.dot-4-text {
+  @extend %dotFadeIn;
+  animation-delay: 4s;
+}
+.dot-5-text {
+  @extend %dotFadeIn;
+  animation-delay: 7s;
+}
+
+@keyframes lineAnimation {
+  0% {
+    stroke-dashoffset: 600;
+  }
+  100% {
+    stroke-dashoffset: 0;
+  }
+}
+.line-animation {
+  stroke-dashoffset: 600;
+  stroke-dasharray: 600;
+  animation: lineAnimation 3s linear 4s forwards;
+}

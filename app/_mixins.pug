@@ -1,0 +1,37 @@
+mixin title(content, extraClass)
+    div(class="section-title " + extraClass)
+        span= content
+            h3(class="title")= content
+
+mixin secondTitle(contentTitle, contentSubtitle, extraClass, subtitleleft= 'subtitle-left', textalign= 'right')
+    div(class="section-subtitle" style='text-align: '+textalign)
+        span(class=subtitleleft+ ' ' + extraClass)= contentSubtitle
+        h4(class="second-title")= contentTitle
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//- mixin mainSlider('subtitle-left', )
+//-     .slider-item__content
+//-         div.slider-item__subtitle.subtitle-left Surf
+//-         h2.slider-item__title.title North Shore
+//-         div.slider-item__subtext.subtitle-left Condition
+//-         h3.slider-item__text.second-title Radical
+//-         .slider-item__arrow
+//-             img(src="./img/icons/arrow-right.svg", alt="nav-arrow")
+//-     .slider-item-bg
+//-         .slider-item-bg__image.ibg
+//-             img(src="./img/header/header-bg.jpg", alt="")
+//-         .slider-item-bg__mask.ibg
+//-             img(src="./img/header/header-bg-mask.png", alt="")

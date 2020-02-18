@@ -1,0 +1,41 @@
+//----------------ШРИФТЫ
+@import "_fonts.scss";
+//----------------ПЕРЕМЕННЫЕ
+@import "_variables.scss";
+//----------------ОБНУЛЯЮЩИЕ СТИЛИ
+@import "_nullstyle.scss";
+//----------------UI
+@import "_ui.scss";
+//----------------HEADER
+@import "_header.scss";
+//----------------FOOTER
+@import "_footer.scss";
+
+//---------------ОБОЛОЧКА
+.wrapper {
+  width: 100%;
+  overflow: hidden;
+}
+
+//---------------КОНТЕЙНЕР
+.container {
+  width: 100%;
+  max-width: $mw;
+  margin: 0 auto;
+}
+
+//---------------ОСНОВНАЯ ЧАСТЬ
+
+
+.surf {
+  padding: 160px 0 120px;
+  &__title {
+    transform: translateX(-40px);
+  }
+  &__desc {
+    margin: 0px 0px 10px 0px;
+  }
+
+
+
+}

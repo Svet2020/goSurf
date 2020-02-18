@@ -1,0 +1,43 @@
+include _mixins.pug
+
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="stylesheet" href="/css/style.css")
+        link(rel="stylesheet" href="/css/animate.min.css")
+        title GoSurf
+    body
+        .wrapper
+            header.header
+                include ./header.pug
+            main.main
+                .container
+                    section.surf
+                        +title('surf', 'surf__title')
+
+                        .surf__desc.desc-left Current location
+                        h4.surf__second-title.second-title California span #[span |] USA
+
+
+
+
+
+
+
+
+                        //- +secondTitle('California | USA', 'Current location', 'surf__subtitle', 'subtitle-left', 'right')
+
+                    //-section.travel
+                        +title( 'travel')
+                    //-section.sleep
+                        +title( 'sleep')
+                    //-section.shop
+                        +title( 'shop')
+
+            footer.footer
+        script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+        script(src="/js/libs.min.js")
+        script(src="/js/main.js")
